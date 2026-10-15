@@ -1,4 +1,4 @@
-# OpenRoSDE Device: spacenav
+# OpenRoSDE spacenav Device
 
 `openrosde-device-spacenav` is the device extension of [OpenRoSDE](https://gitlab.com/coarobo/SDE) for the 3Dconnexion devices, such as the 3Dconnexion SpaceMouse, which packages the `spacenavd` daemon and the [`spacenav_node`](https://wiki.ros.org/spacenav_node) driver with a bridge from the SpaceMouse to the twist commands of MoveIt Servo.
 It names no robot, so any platform or setup of OpenRoSDE that is driven with a SpaceMouse activates it.
