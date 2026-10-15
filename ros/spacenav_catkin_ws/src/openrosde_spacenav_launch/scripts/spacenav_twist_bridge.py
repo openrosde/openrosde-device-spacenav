@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 
+"""Bridge a 3Dconnexion SpaceMouse to a geometry_msgs/TwistStamped command, such as the input of MoveIt Servo.
+
+The node reads the geometry_msgs/Twist of spacenav_node on ~input_twist_topic (/spacenav/twist)
+and its buttons on ~joy_topic (/spacenav/joy), forwards motion only while the enable button is
+held (~require_enable_button), applies a deadband, a low-pass filter, and a slew-rate limit to each axis, and publishes a
+geometry_msgs/TwistStamped stamped in ~frame_id (base_link) at a fixed rate on
+~output_twist_topic (/servo_server/delta_twist_cmds).
+"""
+
 import math
 import threading
 
@@ -8,12 +17,12 @@ from geometry_msgs.msg import Twist, TwistStamped
 from sensor_msgs.msg import Joy
 
 
-class Ur5eSpacenavNodeMoveitServo(object):
+class SpacenavTwistBridge(object):
     def __init__(self):
         self.input_twist_topic = rospy.get_param("~input_twist_topic", "/spacenav/twist")
         self.output_twist_topic = rospy.get_param("~output_twist_topic", "/servo_server/delta_twist_cmds")
         self.joy_topic = rospy.get_param("~joy_topic", "/spacenav/joy")
-        self.frame_id = rospy.get_param("~frame_id", "flange")
+        self.frame_id = rospy.get_param("~frame_id", "base_link")
         self.require_enable_button = rospy.get_param("~require_enable_button", True)
         self.enable_button_index = rospy.get_param("~enable_button_index", 0)
         self.publish_zero_when_disabled = rospy.get_param("~publish_zero_when_disabled", True)
@@ -187,8 +196,8 @@ class Ur5eSpacenavNodeMoveitServo(object):
 
 
 def main():
-    rospy.init_node("ur5e_moveit_servo_spacenav_node")
-    Ur5eSpacenavNodeMoveitServo()
+    rospy.init_node("spacenav_twist_bridge")
+    SpacenavTwistBridge()
     rospy.spin()
 
 

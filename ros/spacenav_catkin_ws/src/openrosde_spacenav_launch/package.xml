@@ -1,0 +1,21 @@
+<package format="2">
+  <name>openrosde_spacenav_launch</name>
+  <version>1.0.0</version>
+  <description>
+    The 'openrosde_spacenav_launch' package bridges the 3Dconnexion devices to twist commands in OpenRoSDE, such as those of MoveIt Servo, around the 'spacenavd' daemon and the 'spacenav_node' driver.
+  </description>
+  <maintainer email="lotfi@coarobo.com">Lotfi El Hafi</maintainer>
+  <author email="lotfi@coarobo.com">Lotfi El Hafi</author>
+
+  <license>Apache-2.0</license>
+
+  <url type="repository">https://gitlab.com/coarobo/openrosde/openrosde-device-spacenav</url>
+  <url type="bugtracker">https://gitlab.com/coarobo/openrosde/openrosde-device-spacenav/-/issues</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>spacenav_node</exec_depend>
+</package>
