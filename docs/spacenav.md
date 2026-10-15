@@ -48,7 +48,7 @@ roslaunch openrosde_spacenav_launch spacenav_twist_bridge.launch
 - The bridge forwards the motion only while Button 0 is held, smooths it, and publishes a `geometry_msgs/TwistStamped` stamped in `base_link` on `/servo_server/delta_twist_cmds`, the input of MoveIt Servo.
 - `reverse_for_front_view:=true` flips the planar translational and tilt axes, for an operator in front of the robot.
 
-Button 1 is left free, so a setup can give it to a gripper, such as the joy mode of `onrobot_rg_command_bridge.py` of `openrosde-device-onrobot` on `/spacenav/joy`.
+Button 1 is left free, so a setup can give it to a gripper, such as with `onrobot_rg_joy_button.launch joy_topic:=/spacenav/joy` of `openrosde-device-onrobot`.
 See the README of [`openrosde_spacenav_launch`](../ros/spacenav_catkin_ws/src/openrosde_spacenav_launch/README.md) for every argument.
 
 > [!IMPORTANT]

@@ -35,7 +35,7 @@ roslaunch openrosde_spacenav_launch spacenav_twist_bridge.launch launch_spacenav
 Usage notes:
 
 - Hold Button 0 as the deadman and move the SpaceMouse to send twist commands.
-- Button 1 is left free for another node, such as the gripper button of `openrosde-device-onrobot`, which reads the same `/spacenav/joy`.
+- Button 1 is left free for another node, such as `onrobot_rg_joy_button.launch` of `openrosde-device-onrobot`, which reads the same `/spacenav/joy`.
 - Set `reverse_for_front_view:=true` when operating from in front of the robot, which flips the planar translational and tilt axes so the hand-to-robot mapping feels like the default behind-the-robot setup.
 
 Parameters:
