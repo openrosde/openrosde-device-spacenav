@@ -2,8 +2,6 @@
 
 Documentation of the spacenav device of OpenRoSDE, which packages the `spacenavd` daemon and the [`spacenav_node`](https://wiki.ros.org/spacenav_node) driver for the 3Dconnexion devices, such as the 3Dconnexion SpaceMouse, with a bridge from the SpaceMouse to the twist commands of MoveIt Servo.
 
-[[_TOC_]]
-
 ## 🔗 External Resources
 
 - 3Dconnexion SpaceMouse: [https://3dconnexion.com/](https://3dconnexion.com/)
