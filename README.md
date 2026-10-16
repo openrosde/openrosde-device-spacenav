@@ -1,12 +1,12 @@
 # OpenRoSDE spacenav Device
 
-`openrosde-device-spacenav` is the device extension of [OpenRoSDE](https://gitlab.com/coarobo/SDE) for the 3Dconnexion devices, such as the 3Dconnexion SpaceMouse, which packages the `spacenavd` daemon and the [`spacenav_node`](https://wiki.ros.org/spacenav_node) driver with a bridge from the SpaceMouse to the twist commands of MoveIt Servo.
+`openrosde-device-spacenav` is the device extension of [OpenRoSDE](https://github.com/openrosde/openrosde) for the 3Dconnexion devices, such as the 3Dconnexion SpaceMouse, which packages the `spacenavd` daemon and the [`spacenav_node`](https://wiki.ros.org/spacenav_node) driver with a bridge from the SpaceMouse to the twist commands of MoveIt Servo.
 It names no robot, so any platform or setup of OpenRoSDE that is driven with a SpaceMouse activates it.
 
-[![Pipeline](https://img.shields.io/gitlab/pipeline-status/coarobo%2Fopenrosde%2Fopenrosde-device-spacenav?branch=main&logo=gitlab&label=Pipeline)](https://gitlab.com/coarobo/openrosde/openrosde-device-spacenav/-/pipelines)
+[![Test with OpenRoSDE](https://github.com/openrosde/openrosde-device-spacenav/actions/workflows/test-with-openrosde.yml/badge.svg?branch=main)](https://github.com/openrosde/openrosde-device-spacenav/actions/workflows/test-with-openrosde.yml)
 [![ROS Noetic](https://img.shields.io/badge/ROS_Noetic-Framework-blue?logo=ros&logoColor=white)](http://wiki.ros.org/noetic)
 [![Docker](https://img.shields.io/badge/Docker-Layer-blue?logo=docker&logoColor=white)](https://www.docker.com/)
-[![OpenRoSDE](https://img.shields.io/badge/OpenRoSDE-Device-blue)](https://gitlab.com/coarobo/SDE)
+[![OpenRoSDE](https://img.shields.io/badge/OpenRoSDE-Device-blue)](https://github.com/openrosde/openrosde)
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-green)](LICENSE)
 
@@ -25,7 +25,7 @@ It names no robot, so any platform or setup of OpenRoSDE that is driven with a S
 1. Clone the device into `extensions/` of OpenRoSDE:
 
     ```shell
-    git clone https://gitlab.com/coarobo/openrosde/openrosde-device-spacenav.git extensions/openrosde-device-spacenav
+    git clone https://github.com/openrosde/openrosde-device-spacenav.git extensions/openrosde-device-spacenav
     ```
 
 2. Activate it in `.env.custom`:
@@ -48,7 +48,7 @@ It names no robot, so any platform or setup of OpenRoSDE that is driven with a S
     roslaunch openrosde_spacenav_launch spacenav_twist_bridge.launch
     ```
 
-A setup usually activates the device in its template and starts its launch file from its own panes, as [`docs/extensions.md`](https://gitlab.com/coarobo/SDE/-/blob/dev/docs/extensions.md) of OpenRoSDE describes.
+A setup usually activates the device in its template and starts its launch file from its own panes, as [`docs/extensions.md`](https://github.com/openrosde/openrosde/blob/dev/docs/extensions.md) of OpenRoSDE describes.
 
 ## 📁 Directory Structure
 
@@ -75,18 +75,18 @@ That check resolves the launch file with `roslaunch --files` and `--dump-params`
 
 ## 🔗 External Resources
 
-- OpenRoSDE: [https://gitlab.com/coarobo/SDE](https://gitlab.com/coarobo/SDE)
+- OpenRoSDE: [https://github.com/openrosde/openrosde](https://github.com/openrosde/openrosde)
 - Coarobo GK: [https://coarobo.com/](https://coarobo.com/)
 
 ## 🐛 Reporting Issues
 
-Please report any issue using the GitLab issue tracker: [https://gitlab.com/coarobo/openrosde/openrosde-device-spacenav/-/issues](https://gitlab.com/coarobo/openrosde/openrosde-device-spacenav/-/issues).
+Please report any issue using the GitHub issue tracker: [https://github.com/openrosde/openrosde-device-spacenav/issues](https://github.com/openrosde/openrosde-device-spacenav/issues).
 
 ## 🤝 Contributing
 
 - This repository uses explicit commit messages following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
 - This project follows [Semantic Versioning](https://semver.org/) for releases.
-- This project follows the conventions of OpenRoSDE, which its [`AGENTS.md`](https://gitlab.com/coarobo/SDE/-/blob/dev/AGENTS.md) describes.
+- This project follows the conventions of OpenRoSDE, which its [`AGENTS.md`](https://github.com/openrosde/openrosde/blob/dev/AGENTS.md) describes.
 
 ## 👥 Authors & Acknowledgment
 
